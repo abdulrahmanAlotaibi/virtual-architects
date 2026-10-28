@@ -1,0 +1,45 @@
+# Checks that every architecture document in docs/architecture/ still exports.
+#
+# docs/architecture/tools/export.py --check is the gate. It enforces what the templates
+# promise: every Mermaid block parses, every referenced image resolves, and no hand drawn
+# diagram where a diagram as code belongs (that one, and dead links, are warnings). It
+# writes no export; it only reports. Add --ban-em-dash to the command if your style rules
+# ban em dashes.
+#
+# Node is needed because Mermaid blocks render through npx @mermaid-js/mermaid-cli, which
+# downloads a headless Chrome on first use. Nothing else is: export.py uses the Python
+# standard library only, and the runner already has Python 3.
+#
+# Actions are pinned to the commit their v4 tag pointed at, not the floating tag, so a
+# moved tag cannot change what runs. Optional: delete this file if you do not want the
+# check on pull requests.
+
+name: Architecture documents
+
+on:
+  pull_request:
+    types: [opened, reopened, synchronize]
+    paths:
+      - "docs/architecture/**/*.md"
+      - "docs/architecture/tools/**"
+      - ".github/workflows/architecture-docs.yml"
+
+concurrency:
+  group: architecture-docs-${{ github.event.pull_request.number }}
+  cancel-in-progress: true
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4
+        with:
+          node-version: '22'
+
+      - name: Every architecture document exports
+        run: python3 docs/architecture/tools/export.py --all --check

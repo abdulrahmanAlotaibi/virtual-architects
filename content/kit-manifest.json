@@ -1,0 +1,669 @@
+{
+  "zip": {
+    "href": "/downloads/virtual-architects-kit.zip",
+    "bytes": 186375,
+    "sha256": "c08941916d3cca6c16acc2c51ab68422b052d9af6d2faded0dda6a6388ef71e8"
+  },
+  "install": {
+    "sh": "https://raw.githubusercontent.com/abdulrahmanAlotaibi/virtual-architects/main/public/install.sh",
+    "ps1": "https://raw.githubusercontent.com/abdulrahmanAlotaibi/virtual-architects/main/public/install.ps1"
+  },
+  "groups": [
+    {
+      "id": "start",
+      "label": "Start here"
+    },
+    {
+      "id": "claude",
+      "label": "Claude Code"
+    },
+    {
+      "id": "copilot",
+      "label": "GitHub Copilot (generated)"
+    },
+    {
+      "id": "automation",
+      "label": "Automation"
+    },
+    {
+      "id": "templates",
+      "label": "Templates"
+    },
+    {
+      "id": "practice",
+      "label": "Practice and records"
+    }
+  ],
+  "files": [
+    {
+      "path": ".claude/agents/cloud-infra-architect.md",
+      "href": "/kit/.claude/agents/cloud-infra-architect.md",
+      "group": "claude",
+      "bytes": 12309,
+      "sha256": "f4fd2ae297d5f72dba9bbb9882ceb2c8767e4bba870fc340499fa3d664609d7f",
+      "executable": false
+    },
+    {
+      "path": ".claude/agents/enterprise-architect.md",
+      "href": "/kit/.claude/agents/enterprise-architect.md",
+      "group": "claude",
+      "bytes": 15878,
+      "sha256": "01c21c56cf57e6ada6008a68007ec3fbeb1245f6a20cb9a3580374cdb12c8e3f",
+      "executable": false
+    },
+    {
+      "path": ".claude/agents/research-architect.md",
+      "href": "/kit/.claude/agents/research-architect.md",
+      "group": "claude",
+      "bytes": 11024,
+      "sha256": "418b19757a9b1b8edc977b994f370659f769147f254017528c9d59b8681cbd58",
+      "executable": false
+    },
+    {
+      "path": ".claude/agents/security-architect.md",
+      "href": "/kit/.claude/agents/security-architect.md",
+      "group": "claude",
+      "bytes": 12046,
+      "sha256": "d3b84c7ac1591bde504ac762bf70bdd58ae1af304034ff9d16c2e325f395e8db",
+      "executable": false
+    },
+    {
+      "path": ".claude/agents/solution-architect.md",
+      "href": "/kit/.claude/agents/solution-architect.md",
+      "group": "claude",
+      "bytes": 15313,
+      "sha256": "9683e237131628e921176d15f7e6adceb147b5df833256fe90d9bccec71e8fe1",
+      "executable": false
+    },
+    {
+      "path": ".claude/commands/arch-board.md",
+      "href": "/kit/.claude/commands/arch-board.md",
+      "group": "claude",
+      "bytes": 1081,
+      "sha256": "7c111efbfd8b62f79fb1c818138eca6fa5f63324c5c75f34718450f5ed29008e",
+      "executable": false
+    },
+    {
+      "path": ".claude/commands/arch-cloud-infra.md",
+      "href": "/kit/.claude/commands/arch-cloud-infra.md",
+      "group": "claude",
+      "bytes": 646,
+      "sha256": "42df4be7aeba5f3c7360f69dc32cd98e580ccbb9d56e71a3b932ec2adbee3ca6",
+      "executable": false
+    },
+    {
+      "path": ".claude/commands/arch-conform.md",
+      "href": "/kit/.claude/commands/arch-conform.md",
+      "group": "claude",
+      "bytes": 975,
+      "sha256": "0a0e05451b10b9f3bd96e5ea1af0f81282751ed12e46103094fcb65bb790dd59",
+      "executable": false
+    },
+    {
+      "path": ".claude/commands/arch-doc.md",
+      "href": "/kit/.claude/commands/arch-doc.md",
+      "group": "claude",
+      "bytes": 856,
+      "sha256": "f327bccdcdc0be7078d3529becfa84f80f0b76197a2dd4347c03bce7edb02991",
+      "executable": false
+    },
+    {
+      "path": ".claude/commands/arch-enterprise.md",
+      "href": "/kit/.claude/commands/arch-enterprise.md",
+      "group": "claude",
+      "bytes": 641,
+      "sha256": "4e83147e7cbb38f49aa9dec973eb03ec833f20e27e6ec8cbce603e4b66382ccc",
+      "executable": false
+    },
+    {
+      "path": ".claude/commands/arch-profile.md",
+      "href": "/kit/.claude/commands/arch-profile.md",
+      "group": "claude",
+      "bytes": 1969,
+      "sha256": "f6495de4ddfbb4a6fb79b9c324ab23bbab2c3417795560b20d8ae816300d6f77",
+      "executable": false
+    },
+    {
+      "path": ".claude/commands/arch-research.md",
+      "href": "/kit/.claude/commands/arch-research.md",
+      "group": "claude",
+      "bytes": 629,
+      "sha256": "28a3dab5aa56fe000687715484a46a964571a62b81d1c5d05faae1ea15c3001b",
+      "executable": false
+    },
+    {
+      "path": ".claude/commands/arch-security.md",
+      "href": "/kit/.claude/commands/arch-security.md",
+      "group": "claude",
+      "bytes": 635,
+      "sha256": "8663aced730549283a4a1d2cad1e9173f5d5e4a2e624db58b04bc3b6a3fa56e4",
+      "executable": false
+    },
+    {
+      "path": ".claude/commands/arch-solution.md",
+      "href": "/kit/.claude/commands/arch-solution.md",
+      "group": "claude",
+      "bytes": 628,
+      "sha256": "0ba0d7f6697908ea96b053d7000a8299c17f2729737c8d4d3d0ed203e27ead3b",
+      "executable": false
+    },
+    {
+      "path": ".claude/commands/arch-sync.md",
+      "href": "/kit/.claude/commands/arch-sync.md",
+      "group": "claude",
+      "bytes": 1010,
+      "sha256": "4a5657f43163db90c9bc094845f8431c9e556f60ce585af3af8a678b4f4f4f1b",
+      "executable": false
+    },
+    {
+      "path": ".claude/scripts/sync-copilot.sh",
+      "href": "/kit/.claude/scripts/sync-copilot.sh",
+      "group": "automation",
+      "bytes": 11382,
+      "sha256": "adb399c13099c17d4f8182d9289607de123d3b55d832009cc665f1da149c3319",
+      "executable": true
+    },
+    {
+      "path": ".claude/skills/solution-design/SKILL.md",
+      "href": "/kit/.claude/skills/solution-design/SKILL.md",
+      "group": "claude",
+      "bytes": 7596,
+      "sha256": "2d9e76b83d1be117c4a51395c6eb3a6020fd60cd49d751145dc0f633f59cd86d",
+      "executable": false
+    },
+    {
+      "path": ".github/agents/cloud-infra-architect.agent.md",
+      "href": "/kit/.github/agents/cloud-infra-architect.agent.md",
+      "group": "copilot",
+      "bytes": 12396,
+      "sha256": "f8c4b3549e2fb0cc5953f07aa999ed608ec10e7ff3a0be47ebe0781ace55858f",
+      "executable": false
+    },
+    {
+      "path": ".github/agents/enterprise-architect.agent.md",
+      "href": "/kit/.github/agents/enterprise-architect.agent.md",
+      "group": "copilot",
+      "bytes": 15964,
+      "sha256": "404bfc839d3fd81ffb20ee571f1d51764efbcd7b399b07204b4065f8ea20bb53",
+      "executable": false
+    },
+    {
+      "path": ".github/agents/research-architect.agent.md",
+      "href": "/kit/.github/agents/research-architect.agent.md",
+      "group": "copilot",
+      "bytes": 10978,
+      "sha256": "9bacad48e8ce28b89df3bddab60864b5f2929eb3187b6f1168f0a304a6d2de7e",
+      "executable": false
+    },
+    {
+      "path": ".github/agents/security-architect.agent.md",
+      "href": "/kit/.github/agents/security-architect.agent.md",
+      "group": "copilot",
+      "bytes": 12133,
+      "sha256": "9821715fb72962433670890107d67794d23d00edc09ad9eeac2b68f20548740d",
+      "executable": false
+    },
+    {
+      "path": ".github/agents/solution-architect.agent.md",
+      "href": "/kit/.github/agents/solution-architect.agent.md",
+      "group": "copilot",
+      "bytes": 15373,
+      "sha256": "9fd70f3d46936cf2f350be7b064d731b867ec6ffa1c7c65cd98b0f762d95681a",
+      "executable": false
+    },
+    {
+      "path": ".github/prompts/arch-board.prompt.md",
+      "href": "/kit/.github/prompts/arch-board.prompt.md",
+      "group": "copilot",
+      "bytes": 392,
+      "sha256": "09539037511efd0ce8a6a00dfec7170991c3f224000764e37d39502caedc2799",
+      "executable": false
+    },
+    {
+      "path": ".github/prompts/arch-cloud-infra.prompt.md",
+      "href": "/kit/.github/prompts/arch-cloud-infra.prompt.md",
+      "group": "copilot",
+      "bytes": 824,
+      "sha256": "3481dd6b0ffe8de8a68d0c348b0be22c9874dd51862e4d630309ba7ff9bdd210",
+      "executable": false
+    },
+    {
+      "path": ".github/prompts/arch-conform.prompt.md",
+      "href": "/kit/.github/prompts/arch-conform.prompt.md",
+      "group": "copilot",
+      "bytes": 578,
+      "sha256": "edfaae1f433392758ee1f0b0d4468058a7d9399ecbb7b143283779df885dda8c",
+      "executable": false
+    },
+    {
+      "path": ".github/prompts/arch-doc.prompt.md",
+      "href": "/kit/.github/prompts/arch-doc.prompt.md",
+      "group": "copilot",
+      "bytes": 533,
+      "sha256": "4e76de8f375b096cbe2f93e9ab43694cc6fe8e8f8e74a31d023bcdc7e8fdc8e8",
+      "executable": false
+    },
+    {
+      "path": ".github/prompts/arch-enterprise.prompt.md",
+      "href": "/kit/.github/prompts/arch-enterprise.prompt.md",
+      "group": "copilot",
+      "bytes": 900,
+      "sha256": "1c07ca5d9a236c4eb522c0c3c74a45723be9a1dabd6128a019a30ef470608128",
+      "executable": false
+    },
+    {
+      "path": ".github/prompts/arch-profile.prompt.md",
+      "href": "/kit/.github/prompts/arch-profile.prompt.md",
+      "group": "copilot",
+      "bytes": 372,
+      "sha256": "73c8b37767d3f8799463f04c3d85cefa365bc956931d96eb5d5ac11050dfc650",
+      "executable": false
+    },
+    {
+      "path": ".github/prompts/arch-research.prompt.md",
+      "href": "/kit/.github/prompts/arch-research.prompt.md",
+      "group": "copilot",
+      "bytes": 833,
+      "sha256": "be540cbaeafcccffe8404be13bbc1ee5981bfa53eb179f70f9ab13b3ec9dfaf0",
+      "executable": false
+    },
+    {
+      "path": ".github/prompts/arch-security.prompt.md",
+      "href": "/kit/.github/prompts/arch-security.prompt.md",
+      "group": "copilot",
+      "bytes": 804,
+      "sha256": "ca76ed42b23c854234dd97c3a650aba603bc528bf97db879d7ce703d9cc98fe0",
+      "executable": false
+    },
+    {
+      "path": ".github/prompts/arch-solution.prompt.md",
+      "href": "/kit/.github/prompts/arch-solution.prompt.md",
+      "group": "copilot",
+      "bytes": 842,
+      "sha256": "73ca7c53000f07f4f555d758d142ccd4b92408ed05297eb835759e407a854426",
+      "executable": false
+    },
+    {
+      "path": ".github/skills/arch-board/SKILL.md",
+      "href": "/kit/.github/skills/arch-board/SKILL.md",
+      "group": "copilot",
+      "bytes": 1243,
+      "sha256": "6becd0d16853ea871210e5450f27fe749fbde0dfcc0bf2752c7b4a7e8bbd9066",
+      "executable": false
+    },
+    {
+      "path": ".github/skills/arch-cloud-infra/SKILL.md",
+      "href": "/kit/.github/skills/arch-cloud-infra/SKILL.md",
+      "group": "copilot",
+      "bytes": 12558,
+      "sha256": "01cea75d0684b6311abab2c4436b0963f0218298d2569ee2933a971ebed5e6fc",
+      "executable": false
+    },
+    {
+      "path": ".github/skills/arch-conform/SKILL.md",
+      "href": "/kit/.github/skills/arch-conform/SKILL.md",
+      "group": "copilot",
+      "bytes": 792,
+      "sha256": "598c1720324666c324f9ca87b24f79f5afdd02c8048ee212d93c59156c6af912",
+      "executable": false
+    },
+    {
+      "path": ".github/skills/arch-doc/SKILL.md",
+      "href": "/kit/.github/skills/arch-doc/SKILL.md",
+      "group": "copilot",
+      "bytes": 594,
+      "sha256": "d36bd0c948ade4f16f293ffcf877fbe5e3e610294e4756d79d72d396928ac65e",
+      "executable": false
+    },
+    {
+      "path": ".github/skills/arch-enterprise/SKILL.md",
+      "href": "/kit/.github/skills/arch-enterprise/SKILL.md",
+      "group": "copilot",
+      "bytes": 16126,
+      "sha256": "020aee8ec51581598460574cceaa2598879dc32e77a4de4407066fd19554befd",
+      "executable": false
+    },
+    {
+      "path": ".github/skills/arch-profile/SKILL.md",
+      "href": "/kit/.github/skills/arch-profile/SKILL.md",
+      "group": "copilot",
+      "bytes": 2063,
+      "sha256": "70292e961713394b02cbb6f5fcec803ae2eb714827cd0b18ab35f75b98d20f77",
+      "executable": false
+    },
+    {
+      "path": ".github/skills/arch-research/SKILL.md",
+      "href": "/kit/.github/skills/arch-research/SKILL.md",
+      "group": "copilot",
+      "bytes": 11140,
+      "sha256": "024146769f93ab3214b40b973e5677741ec4a95e5a29d044bd8f26c76563ebe9",
+      "executable": false
+    },
+    {
+      "path": ".github/skills/arch-security/SKILL.md",
+      "href": "/kit/.github/skills/arch-security/SKILL.md",
+      "group": "copilot",
+      "bytes": 12295,
+      "sha256": "8ffc5785ac140f299d8fb9c374ec0da5aab7aa4fbc00be6e3d9a00213871aafc",
+      "executable": false
+    },
+    {
+      "path": ".github/skills/arch-solution/SKILL.md",
+      "href": "/kit/.github/skills/arch-solution/SKILL.md",
+      "group": "copilot",
+      "bytes": 15535,
+      "sha256": "7265ff89a38db23807410608ef2dcdf8ae02c0cdf25f49d4a9309bdaa3a302a1",
+      "executable": false
+    },
+    {
+      "path": ".github/skills/solution-design/SKILL.md",
+      "href": "/kit/.github/skills/solution-design/SKILL.md",
+      "group": "copilot",
+      "bytes": 7709,
+      "sha256": "316079aadddd33956a83fe88a396229bcc5d538d06f4d03e9b7b823936ff1d2a",
+      "executable": false
+    },
+    {
+      "path": ".github/workflows/architecture-docs.yml",
+      "href": "/kit/.github/workflows/architecture-docs.yml",
+      "group": "automation",
+      "bytes": 1668,
+      "sha256": "bc8612d7ce25a471520a43b3a66dadfa7aac87ef89bc7921f7b090610ae2a488",
+      "executable": false
+    },
+    {
+      "path": ".github/workflows/sync-copilot.yml",
+      "href": "/kit/.github/workflows/sync-copilot.yml",
+      "group": "automation",
+      "bytes": 1917,
+      "sha256": "cf365a897a32f76d4f4685859361467264d25e84628c453230765a25ed804f35",
+      "executable": false
+    },
+    {
+      "path": "INSTALL.md",
+      "href": "/kit/INSTALL.md",
+      "group": "start",
+      "bytes": 6507,
+      "sha256": "802311a2b5087ebcdb22e5844f905830a0659f8125d78878639929e993ef7181",
+      "executable": false
+    },
+    {
+      "path": "docs/architecture/LICENSE",
+      "href": "/kit/docs/architecture/LICENSE",
+      "group": "practice",
+      "bytes": 1077,
+      "sha256": "fed8c51407268de4ee3c14e2ffc2ef21d51c9572c4ba3d62416cde7eca783e4b",
+      "executable": false
+    },
+    {
+      "path": "docs/architecture/README.md",
+      "href": "/kit/docs/architecture/README.md",
+      "group": "start",
+      "bytes": 22449,
+      "sha256": "adc2c6d688e0ff3cff559fd6eea807cd74a227ece98e6b3199c7e78381cee69f",
+      "executable": false
+    },
+    {
+      "path": "docs/architecture/decisions/README.md",
+      "href": "/kit/docs/architecture/decisions/README.md",
+      "group": "practice",
+      "bytes": 392,
+      "sha256": "a31099326eb35653f091405d6ffec6f4af9fc3e518082dbf711fca0017a4f782",
+      "executable": false
+    },
+    {
+      "path": "docs/architecture/practice/ea-playbook.md",
+      "href": "/kit/docs/architecture/practice/ea-playbook.md",
+      "group": "practice",
+      "bytes": 25048,
+      "sha256": "1a9f197e24c3f60cfe73179d50f2290247f40a5feb7e923cc47fb61573272cce",
+      "executable": false
+    },
+    {
+      "path": "docs/architecture/practice/research/README.md",
+      "href": "/kit/docs/architecture/practice/research/README.md",
+      "group": "practice",
+      "bytes": 1446,
+      "sha256": "6a6a7f802a92a42126ae0ec6a01641eafeefdec6f054a39b90e502580e89e3d8",
+      "executable": false
+    },
+    {
+      "path": "docs/architecture/practice/research/questions.yaml",
+      "href": "/kit/docs/architecture/practice/research/questions.yaml",
+      "group": "practice",
+      "bytes": 498,
+      "sha256": "442212d1110cfadbf5551c967c551c0dc499bbc352e975af1701323b7020ec9d",
+      "executable": false
+    },
+    {
+      "path": "docs/architecture/practice/research/sources.yaml",
+      "href": "/kit/docs/architecture/practice/research/sources.yaml",
+      "group": "practice",
+      "bytes": 1221,
+      "sha256": "0bca31e3426ba5fa48fa036cacd277d2ce678152e96b0754b93e1a8b39e1fc48",
+      "executable": false
+    },
+    {
+      "path": "docs/architecture/practice/templates/README.md",
+      "href": "/kit/docs/architecture/practice/templates/README.md",
+      "group": "templates",
+      "bytes": 6164,
+      "sha256": "c99d35ac656f3fb553f8c524245af78f1c5fdab7c6ef17bd0886b3f06ec1a31b",
+      "executable": false
+    },
+    {
+      "path": "docs/architecture/practice/templates/adr.md",
+      "href": "/kit/docs/architecture/practice/templates/adr.md",
+      "group": "templates",
+      "bytes": 1562,
+      "sha256": "730a09a11db980f7bc929280abfa58f33295dff18fd491247d4f3d65b899f42c",
+      "executable": false
+    },
+    {
+      "path": "docs/architecture/practice/templates/change-plan.md",
+      "href": "/kit/docs/architecture/practice/templates/change-plan.md",
+      "group": "templates",
+      "bytes": 1564,
+      "sha256": "e22c37fc10cb70c6ae9426fac8ca7817038de4602aa586602bc169ce8da3629a",
+      "executable": false
+    },
+    {
+      "path": "docs/architecture/practice/templates/guideline.md",
+      "href": "/kit/docs/architecture/practice/templates/guideline.md",
+      "group": "templates",
+      "bytes": 5296,
+      "sha256": "e71bc5164d0da9f4aed23e3bc804f79bca9421f8f5ec81440ff6063f3078c18a",
+      "executable": false
+    },
+    {
+      "path": "docs/architecture/practice/templates/hld.md",
+      "href": "/kit/docs/architecture/practice/templates/hld.md",
+      "group": "templates",
+      "bytes": 14617,
+      "sha256": "8df14834863ef61cbff27a395efff16042f98d4624f93528c0f603b1ca5ce473",
+      "executable": false
+    },
+    {
+      "path": "docs/architecture/practice/templates/lld.md",
+      "href": "/kit/docs/architecture/practice/templates/lld.md",
+      "group": "templates",
+      "bytes": 14053,
+      "sha256": "655d31120157a60cafc804c2d57dbb82a4bdddbb2d40bec8393eaf31ea0df379",
+      "executable": false
+    },
+    {
+      "path": "docs/architecture/practice/templates/outline.md",
+      "href": "/kit/docs/architecture/practice/templates/outline.md",
+      "group": "templates",
+      "bytes": 1826,
+      "sha256": "bef0bfb9ec82b725234140a670207557382121931455950d8484d9188ae7e080",
+      "executable": false
+    },
+    {
+      "path": "docs/architecture/practice/templates/project.example.yaml",
+      "href": "/kit/docs/architecture/practice/templates/project.example.yaml",
+      "group": "templates",
+      "bytes": 6824,
+      "sha256": "52e3960f7aee59abd4ee44ef64cef536ccd38911feb6586044fb641f99c239dc",
+      "executable": false
+    },
+    {
+      "path": "docs/architecture/practice/templates/research-brief.md",
+      "href": "/kit/docs/architecture/practice/templates/research-brief.md",
+      "group": "templates",
+      "bytes": 899,
+      "sha256": "69e2ee6832535a458e04cbfd60a9ebeb4098ba653a6e71e487ed0a42fa7a6c4f",
+      "executable": false
+    },
+    {
+      "path": "docs/architecture/practice/templates/threat-model.md",
+      "href": "/kit/docs/architecture/practice/templates/threat-model.md",
+      "group": "templates",
+      "bytes": 2019,
+      "sha256": "cf0ba19e51caff925a5e4381a65bfad765b5cfd4fd06935beeed3124d81ed185",
+      "executable": false
+    },
+    {
+      "path": "docs/architecture/project.yaml",
+      "href": "/kit/docs/architecture/project.yaml",
+      "group": "start",
+      "bytes": 6833,
+      "sha256": "a3f07093cd2aba0257d0bbe2997573bed565ba1cd6d5117b6ba12ed11e7394ae",
+      "executable": false
+    },
+    {
+      "path": "docs/architecture/tools/.gitignore",
+      "href": "/kit/docs/architecture/tools/.gitignore",
+      "group": "automation",
+      "bytes": 13,
+      "sha256": "32dae3052f331ee34d628ef535709b301259a45df7c7522c4d35dcf49873f00b",
+      "executable": false
+    },
+    {
+      "path": "docs/architecture/tools/README.md",
+      "href": "/kit/docs/architecture/tools/README.md",
+      "group": "automation",
+      "bytes": 6496,
+      "sha256": "564fd74f21673f44c39e7fb5c7710e7550a82c79bbc5681913cbf8f4bf0023b8",
+      "executable": false
+    },
+    {
+      "path": "docs/architecture/tools/export.py",
+      "href": "/kit/docs/architecture/tools/export.py",
+      "group": "automation",
+      "bytes": 50000,
+      "sha256": "5de1816e78b0cada85a9d1c2d2fe5af5ea0761dfb9e008f13a68fcddf3835f88",
+      "executable": false
+    }
+  ],
+  "templates": [
+    {
+      "name": "outline.md",
+      "path": "docs/architecture/practice/templates/outline.md",
+      "owner": "enterprise",
+      "use": "The business view of a change: goal, options, cost (CSVLOD Outline)",
+      "savedTo": "outlines/solutions/",
+      "version": "2",
+      "scoped": false,
+      "lines": 63,
+      "preview": "# Outline: <initiative>\n\n| | |\n|---|---|\n| Status | Draft / Agreed / Replaced by design / Dropped |\n| Owner | enterprise-architect |\n| Decided by | <decision maker> |\n| Capability | the capability it serves or adds (`business.capabilities`) |\n| Roadmap item | link, or \"not on the roadmap\" (then say why it jumps the queue) |\n| Template | outline v2 |\n\n## Goal\n\nOne sentence: the business outcome, for whom. Then the driver (why now) and the\nconstraint (what limits the answer), per the motivation chain in the EA playbook.\n\n## Scope\n\nIn and out, as bullets.\n\n## Benefit, time, cost\n\n| Benefit | Time to first value | One-off cost | Running cost per month | Team time |\n|---|---|---|---|---|\n\n## Options\n\nAt least two. Score each 1 to 5; say what a score means if it isn't obvious.\n\n| Option | Functionality | Feasibility | Fit with target | Cost | Notes |\n|---|---|---|---|---|---|\n| Build | | | | | |\n| Buy | | | | | |\n| Extend a current vendor | | | | | |\n\n## Recommendation\n\nThe option, why, and the trigger that would change it.\n\n## Risks",
+      "more": 8
+    },
+    {
+      "name": "adr.md",
+      "path": "docs/architecture/practice/templates/adr.md",
+      "owner": "any",
+      "use": "A decision with lasting impact",
+      "savedTo": "decisions/",
+      "version": "2",
+      "scoped": false,
+      "lines": 50,
+      "preview": "# NNNN. <Decision, as a short imperative: \"Keep the monolith for billing\">\n\n| | |\n|---|---|\n| Status | Proposed / Accepted / Superseded by NNNN / Rejected |\n| Date | <yyyy-mm-dd> |\n| Decision type | Strategy / Investment / Technology / Design (EA playbook) |\n| Proposed by | <architect> |\n| Decided by | <decision maker> |\n| Related | the design, outline, threat model or brief that raised it |\n| Template | adr v2 |\n\n## Context\n\nThe forces at play, in a few sentences: the business need, the constraint, what is true\ntoday (cite `file:line` or a doc). Neutral; no recommendation yet.\n\n## Options considered\n\n| Option | What it delivers | Cost (money, team time) | Risk | Lock-in, reversibility |\n|---|---|---|---|---|\n| A | | | | |\n| B | | | | |\n\n## Decision\n\nThe option chosen, in one or two sentences, and why it beat the others.\n\n## Consequences\n\nWhat becomes easier, what becomes harder, what we now must do (follow-up work with\nowners), and which landscape, standard or view changes.\n\n## Revisit when\n\nThe trigger that would reopen this: a volume, a cost, a regulation, a vendor change, a\ndate.",
+      "more": 0
+    },
+    {
+      "name": "hld.md",
+      "path": "docs/architecture/practice/templates/hld.md",
+      "owner": "solution",
+      "use": "High-level design for a feature, an integration, or the full system, through the solution-design skill (/arch-doc)",
+      "savedTo": "designs/solutions/<project>/ or designs/products/<product>/",
+      "version": "4",
+      "scoped": true,
+      "lines": 296,
+      "preview": "---\ntitle: \"HLD: <title>\"\nstatus: Draft\nowner: solution-architect\ndate: <YYYY-MM-DD>\ntemplate: hld v4\n---\n\n# HLD: <title>\n\n<!-- status: Draft | In review | Agreed | Built | Archived. Flat keys only in the front\nmatter above: the exporter reads it without a YAML library and renders it as the\ndocument's metadata table. -->\n\n## 0. Document control  [F I S]\n\n| | |\n|---|---|\n| Scope | Feature / Integration / Full system |\n| Reviewers | the architects named in \u00a712 |\n| Outline | link to the enterprise architect's outline, or \"none\" |\n| SAD | ./lld.md, or the system SAD this change changes |\n| Verified against code | <date>, <commit> |\n| Sections left out | the numbers, and one line on why |\n\n## 1. Purpose  [F I S]\n\nWhy this change, in business terms, in one short paragraph plus three bullets. A reader who\nknows nothing should finish this section able to say what gets better and for whom.\n\n- **The demand:** what changes for which users (the profile's `users`). For an integration:\n  the capability we need from the provider and why we are not building it. For the full\n  system: what the system is for.\n- **The capability it serves:** the `capability_map` part, or an entry in\n  `business.capabilities`.\n- **In scope / out of scope:** two short lists. Out of scope is the more useful one.\n\n## 2. Audience  [F I S]\n\n| Reader | The decision or action this document has to support |",
+      "more": 218
+    },
+    {
+      "name": "lld.md",
+      "path": "docs/architecture/practice/templates/lld.md",
+      "owner": "solution",
+      "use": "Low-level design for the same three scopes, written as the Software Architecture Document (SAD) on arc42 9.1",
+      "savedTo": "designs/solutions/<project>/ or designs/products/<product>/",
+      "version": "3",
+      "scoped": true,
+      "lines": 304,
+      "preview": "---\ntitle: \"LLD / SAD: <title>\"\nstatus: Draft\nowner: solution-architect\ndate: <YYYY-MM-DD>\ntemplate: lld v3 (arc42 9.1)\n---\n\n# LLD / SAD: <title>\n\n<!-- status: Draft | In review | Agreed | Built | Archived. Flat keys only in the front\nmatter above: the exporter reads it without a YAML library and renders it as the\ndocument's metadata table. -->\n\n| | |\n|---|---|\n| HLD | ./hld.md |\n| Scope | Feature / Integration / Full system |\n| Verified against code | <date>, <commit> |\n| Sections left out | the numbers, and one line on why |\n\n> **How this relates to the HLD.** The HLD decides; this document describes. The HLD\n> carries the business case, the regulatory answer and the options that were weighed for\n> one change. This document is the architecture of the system as built. Where the two\n> would say the same thing, this document says it and the HLD points here with\n> \"see SAD \u00a7n\". Never restate the HLD.\n\n> **Template basis.** Sections 1 to 12 follow the arc42 template by Gernot Starke and\n> Peter Hruschka (<https://arc42.org>), used under CC BY-SA 4.0. Sections 13 to 16 are\n> additions to arc42 made by this template.\n\n## 1. Introduction and goals  [F I S]\n\nWhat the system does, for whom, and the handful of qualities that drive its architecture.\n\n### 1.1 Requirements overview\nThe functional core in a short list or table. For a feature: what this change makes\npossible. Link the HLD rather than restating its business case.\n\n### 1.2 Quality goals",
+      "more": 218
+    },
+    {
+      "name": "threat-model.md",
+      "path": "docs/architecture/practice/templates/threat-model.md",
+      "owner": "security",
+      "use": "Threats and planned controls for a new design",
+      "savedTo": "designs/solutions/<project>/",
+      "version": "2",
+      "scoped": false,
+      "lines": 64,
+      "preview": "# Threat model: <feature or flow>\n\n| | |\n|---|---|\n| Design | link to the HLD |\n| Status | Draft / Agreed / Controls built |\n| Owner | security-architect |\n| Template | threat-model v2 |\n\n## Scope\n\nWhat is in, what is out, and who uses it (the profile's `users`, plus jobs and providers).\n\n## Assets and data\n\n| Asset or data | Classification | Whose (which kind of user) | Where it lives | Retention |\n|---|---|---|---|---|\n\n## Data flow and trust boundaries\n\nThe flow from the HLD (its process view), and each trust boundary on the trust-boundary view it crosses, with the\ncontrol at the crossing.\n\n## Threats\n\nSTRIDE, limited to what is realistic for this product. Likelihood and impact as\nLow / Medium / High.\n\n| # | Threat (STRIDE) | Abuse case | Likelihood | Impact | Control | Where (file or resource) | Planned or exists |\n|---|---|---|---|---|---|---|---|\n\n## Personal data and compliance\n\nConsent (including a guardian's, for minors), minimisation, cross-border transfer,\nretention and deletion, against each entry in the profile's `regulation`; what goes to\neach third party in `integrations`. Note any LLM prompt-injection\npath through user-supplied content.\n\n## Recommendation\n",
+      "more": 8
+    },
+    {
+      "name": "change-plan.md",
+      "path": "docs/architecture/practice/templates/change-plan.md",
+      "owner": "cloud-infra",
+      "use": "Steps, verification, rollback and cost for an infra change",
+      "savedTo": "designs/solutions/<project>/",
+      "version": "2",
+      "scoped": false,
+      "lines": 56,
+      "preview": "# Change plan: <change>\n\n| | |\n|---|---|\n| Design | link to the HLD or ADR that needs it, or \"operational\" |\n| Status | Draft / Agreed / Done / Rolled back |\n| Owner | cloud-infra-architect |\n| Template | change-plan v2 |\n\n## Requirement\n\nAs numbers where possible: traffic, latency, uptime, data size, RPO and RTO, budget.\nDefaults stated as assumptions.\n\n## Current state\n\nWhat runs today, from `docs.infrastructure`, the deployment view and the config, with\nreferences.\n\n## Options\n\n| Option | Cost per month (USD) | Operational load | Failure modes | Migration path |\n|---|---|---|---|---|\n\nAssumptions behind the costs:\n\n## Steps\n\nNumbered. Each step: the exact command or file change, how to verify it worked, and how\nto undo it.\n\n1.\n\n## Rollback\n\nThe whole-change rollback, and the point after which rollback means restoring data.\n\n## Updates in the same change\n\n- [ ] Every diagram and doc the profile's `rules` say an infra change must update (for",
+      "more": 4
+    },
+    {
+      "name": "research-brief.md",
+      "path": "docs/architecture/practice/templates/research-brief.md",
+      "owner": "research",
+      "use": "What a source means for each architect",
+      "savedTo": "practice/research/",
+      "version": "2",
+      "scoped": false,
+      "lines": 41,
+      "preview": "# <Topic>\n\nResearched <date> by research-architect. Sources: <ids or links, with page dates>.\nTemplate: research-brief v2.\n\n## Summary\n\nThree to six sentences: what the source says that matters to this project.\n\n## What it means for each architect\n\n- **Enterprise:**\n- **Solution:**\n- **Cloud and infra:**\n- **Security:**\n\nWrite \"No impact\" when there is none. Do not pad.\n\n## Questions raised\n\n| ID | Question | Owner | Status |\n|---|---|---|---|\n\n## Facts vs claims\n\nWhat is documented, what is a vendor's claim, what is inference.\n\n## Suggested next step\n\nWhich architect should pick this up first, and with what question.",
+      "more": 0
+    },
+    {
+      "name": "guideline.md",
+      "path": "docs/architecture/practice/templates/guideline.md",
+      "owner": "solution",
+      "use": "An engineering guideline: numbered rules, a pull request checklist, and where today's code breaks them",
+      "savedTo": "standards/guidelines/",
+      "version": "2",
+      "scoped": false,
+      "lines": 127,
+      "preview": "---\ntitle: <Name> Guide\nstatus: Draft\nowner: solution-architect\ndate: <YYYY-MM-DD>\n---\n\n# <emoji> <Name> Guide\n\n> **What this is.** One paragraph: what this guideline governs, and the failure it exists\n> to prevent. Write the failure concretely. A reader who has met that failure should\n> recognize it here.\n\n**Owner:** <team or architect> \u00b7 **Applies to:** `<the folders it governs>` (`<the stack it assumes, from the profile's stack>`) \u00b7 **Basis:** `<the primary sources, named with versions>`\n* * *\n## <Subject> at a glance\n\n| Question | Answer | Where |\n| ---| ---| --- |\n| <the question a reader arrives with> | <the answer in one line> | \u00a7n |\n\nFour to seven rows. This table exists so a narrow question can be answered without\nreading the file, so every row is a question someone actually asks.\n\n> \ud83c\udfaf **The rule this guide is built on:** _one sentence._ If you cannot write it, the\n> guideline does not have a spine yet and the sections will not hang together.\n\n> \u26a0\ufe0f **Scope.** What this guideline does **not** cover, and which guideline does. Name the\n> file. A rule stated in two guidelines goes stale in one of them.\n\n> \ud83d\udea7 **Status.** Only if the guideline rests on a decision the decision maker has not taken. Say\n> which decision, which rules change with it, and that the rest hold either way. Delete\n> this box when the decision lands and the status moves to Agreed.\n* * *\n## 1. <The first section>\n\nNumbered sections, `### 1.1` subsections. Number the rules too, and keep the numbers\nstable, so a review comment can cite \"rule 14\" and a reader can find it.\n\n### 1.1 <A subsection>",
+      "more": 63
+    },
+    {
+      "name": "project.example.yaml",
+      "path": "docs/architecture/practice/templates/project.example.yaml",
+      "owner": "the team",
+      "use": "The blank project profile. Copy to docs/architecture/project.yaml and fill it in for a new project",
+      "savedTo": "project.yaml",
+      "version": null,
+      "scoped": false,
+      "lines": 139,
+      "preview": "# Project profile for the virtual architecture team. BLANK COPY: fill it in.\n#\n# Copy to docs/architecture/project.yaml in your project. The architects in\n# .claude/agents/ are generic; everything they know about your project comes from here.\n# Fill what you know, leave \"\" where you don't yet, and the architects will ask for it.\n# Delete a whole section only if it can never apply (say, `hosting` for a library).\n# No secret values, ever: name the variable or the secret.\n\nprofile_version: 1\n\nproject:\n  name: \"\"                 # product or company name, as users see it\n  local_name: \"\"           # the name in the primary language, if different\n  summary: \"\"              # two sentences: what it does, for whom\n  stage: \"\"                # idea / pilot / live / scaling, and roughly how big\n  team: \"\"                 # who builds and runs it\n  decision_maker: \"\"       # who decides; architects recommend (e.g. \"the CTO\", \"the head of engineering\", \"the architecture board\")\n  reply_language: \"\"       # e.g. \"English\", or \"English, or the language of the message\"\n  naming_rules: []         # names to use or never use (legacy repo names, brand spelling)\n\nusers:                     # each kind of user, and what matters about them\n  - name: \"\"\n    notes: \"\"              # include anyone who cannot consent for themselves, such as children\n\nlanguages:\n  primary: \"\"              # include the script direction if RTL\n  others: []\n  notes: \"\"                # where translations live, RTL traps\n\nbusiness:\n  capabilities: []         # what the business must be able to do, one line each\n  contexts:                # bounded contexts, if you know them\n    - name: \"\"\n      owns: \"\"\n      lives_in: \"\"         # modules or services in the code\n  bias: \"\"                 # e.g. \"smallest architecture a team of two can run\"\n\nstack:\n  frontend: \"\"             # framework, version, folder\n  backend: \"\"              # language, framework, structure, how dependencies are wired",
+      "more": 99
+    }
+  ]
+}

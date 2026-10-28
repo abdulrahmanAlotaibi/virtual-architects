@@ -1,0 +1,15 @@
+# Question bank. One owner per question: enterprise-architect, solution-architect,
+# cloud-infra-architect or security-architect. status: open | answered | superseded.
+# Never record a weakness in the project's own systems here.
+#
+# Shape of one entry:
+#   - id: Q-001
+#     question: "The question, specific enough to answer"
+#     owner: security-architect
+#     asked_by: research-architect
+#     status: open
+#     answer: null
+#     sources: [S-KOTUSEV]
+#     answered_on: null
+
+questions: []

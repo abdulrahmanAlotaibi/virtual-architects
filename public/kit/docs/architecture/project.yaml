@@ -1,0 +1,139 @@
+# Project profile for the virtual architecture team. Fill it in.
+#
+# This is a copy of practice/templates/project.example.yaml, already in place. The architects in
+# .claude/agents/ are generic; everything they know about your project comes from here.
+# Fill what you know, leave "" where you don't yet, and the architects will ask for it.
+# Delete a whole section only if it can never apply (say, `hosting` for a library).
+# No secret values, ever: name the variable or the secret.
+
+profile_version: 1
+
+project:
+  name: ""                 # product or company name, as users see it
+  local_name: ""           # the name in the primary language, if different
+  summary: ""              # two sentences: what it does, for whom
+  stage: ""                # idea / pilot / live / scaling, and roughly how big
+  team: ""                 # who builds and runs it
+  decision_maker: ""       # who decides; architects recommend (e.g. "the CTO", "the head of engineering", "the architecture board")
+  reply_language: ""       # e.g. "English", or "English, or the language of the message"
+  naming_rules: []         # names to use or never use (legacy repo names, brand spelling)
+
+users:                     # each kind of user, and what matters about them
+  - name: ""
+    notes: ""              # include anyone who cannot consent for themselves, such as children
+
+languages:
+  primary: ""              # include the script direction if RTL
+  others: []
+  notes: ""                # where translations live, RTL traps
+
+business:
+  capabilities: []         # what the business must be able to do, one line each
+  contexts:                # bounded contexts, if you know them
+    - name: ""
+      owns: ""
+      lives_in: ""         # modules or services in the code
+  bias: ""                 # e.g. "smallest architecture a team of two can run"
+
+stack:
+  frontend: ""             # framework, version, folder
+  backend: ""              # language, framework, structure, how dependencies are wired
+  database: ""
+  object_storage: ""
+  auth: ""
+  observability: ""        # logger, event naming, error tracking
+  testing: ""              # framework, what tests run against, how they replace dependencies
+  ai: ""                   # model providers, if any
+
+hosting:
+  primary_cloud: ""
+  region: ""
+  residency_note: ""       # where data may or must live, and open questions
+  components:              # what runs where
+    - name: ""
+      runs_on: ""
+  delivery: ""             # build and deploy pipeline files
+  config: ""               # where configuration lives, how environments differ
+  provisioning: ""         # IaC, scripts, or console by hand
+  check_live_state: ""     # a read-only command that shows what is deployed
+
+integrations:              # external systems
+  - name: ""
+    purpose: ""
+    watch_for: ""          # data that leaves, risks, contract limits
+
+# List the standards you follow by choice too: the HLD's cybersecurity posture separates
+# the control sets that bind you from the ones you are measured against by choice.
+regulation:                # laws, licences and standards that apply
+  - name: ""               # name the version: a superseded control set is a defect
+    binding: ""            # "yes", or "no, followed by choice"
+    applies_because: ""
+    watch_for: ""          # what would change the answer: a new version, a customer that makes it binding
+
+data_protection:
+  most_sensitive: ""       # the data that matters most
+  abuse_cases: []          # realistic misuse; threat models and the HLD access matrix start here
+  log_rules: ""            # what may and may not be logged
+  restricted_register: ""  # where live weaknesses go instead of the repo
+
+accepted_risks:            # known risks with a plan, so architects don't re-report them
+  - risk: ""
+    plan: ""
+
+docs:                      # paths the architects read first
+  conventions: ""          # e.g. CLAUDE.md, CONTRIBUTING.md
+  product_context: ""
+  infrastructure: ""
+  design_system: ""
+  auth: []
+  public_promises: []      # privacy and security pages users read
+  service_docs: ""
+  # Every guideline in guidelines_dir, one key each, the path as the value. Give each a
+  # `status` in its front matter (Draft or Agreed), as the guideline template does. Keep
+  # the list complete: a partial list reads as if the rest do not exist. Leave a key ""
+  # if you have no such guideline yet, and add keys for guidelines not listed here.
+  guidelines_dir: ""       # the folder that holds them, e.g. docs/architecture/standards/guidelines/
+  guidelines:              # your engineering standards
+    service_design: ""     # module and context boundaries
+    api_design: ""         # resource naming, versioning, pagination
+    api_layering: ""       # what a route, controller, service and adapter may each hold
+    communication_patterns: ""  # synchronous or asynchronous, queues, real time
+    error_modeling: ""     # what the API returns when it fails
+    cybersecurity: ""      # access control, tokens, secrets
+    data_modeling: ""      # schemas, data classification, migrations
+    dependency_injection: ""  # how dependencies are wired and replaced in tests
+    testing: ""            # test levels, fakes, what the test database really is
+    code_documentation: ""  # commits, comments, API docs in code
+    observability: ""      # logs, traces, metrics, alerting
+    media_and_assets: ""   # uploads, images, caching
+    delivery_pipeline: ""  # deploy gates, supply chain
+    infrastructure_as_code: ""  # the IaC tool, and when it pays for itself
+  ea_playbook: docs/architecture/practice/ea-playbook.md  # how you practise EA; the kit ships a starting one
+  architecture_root: docs/architecture
+
+commands:
+  lint: ""                 # the linter; /arch-conform runs it before reading code
+  typecheck: ""
+  test: ""
+  client_build: ""
+  # Architecture documents. The kit ships the export tool, so these work as they are; add
+  # --ban-em-dash if your rules ban em dashes.
+  docs_check: python3 docs/architecture/tools/export.py --all --check  # every document still exports
+  docs_export: python3 docs/architecture/tools/export.py <path.md> --to html,pdf,docx  # render one to read or send
+
+rules: []                  # repo rules an architect must follow when it edits files
+
+diagrams:
+  # Leave `pipeline` empty if you don't have diagrams as code; architects then draw
+  # Mermaid in Markdown.
+  pipeline: ""
+  manifest: ""
+  build: ""
+  rendered: ""
+  hand_drawn: []
+  owns:                    # which views each architect keeps true
+    enterprise-architect: []
+    solution-architect: []
+    cloud-infra-architect: []
+    security-architect: []
+  parts: {}                # where each part of the architecture description lives, e.g. context_map: <path>; the solution-design skill lists the parts

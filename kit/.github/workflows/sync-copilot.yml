@@ -1,0 +1,53 @@
+# Keeps Copilot's architects in step with Claude Code's.
+#
+# .claude/scripts/sync-copilot.sh generates .github/agents/, .github/skills/arch-*,
+# .github/skills/solution-design and .github/prompts/arch-* from the Claude Code
+# sources. When a push changes a source, this runs the script and pushes one commit
+# with the regenerated files, or none if they were already current.
+
+name: Sync Copilot architects
+
+on:
+  push:
+    paths:
+      - ".claude/agents/**"
+      - ".claude/scripts/sync-copilot.sh"
+      - ".claude/commands/**"
+      - ".claude/skills/solution-design/**"
+
+concurrency:
+  group: sync-copilot-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  sync:
+    # The bot's own commit touches only .github/, so it doesn't retrigger; this guard
+    # covers a run that does.
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    permissions:
+      contents: write
+    steps:
+      # Pinned to the commit its v4 tag pointed at: this job can push, so a moved tag must
+      # not be able to change what runs.
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+
+      - name: Regenerate the Copilot copies
+        run: .claude/scripts/sync-copilot.sh
+
+      # The branch name comes in through env, never pasted into the script: a branch can be
+      # named `$(...)`, and the shell would run it.
+      - name: Commit if anything changed
+        env:
+          BRANCH: ${{ github.ref_name }}
+        run: |
+          git add .github/agents .github/skills .github/prompts
+          if git diff --cached --quiet; then
+            echo "Copilot copies already current."
+            exit 0
+          fi
+          git -c user.name="github-actions[bot]" \
+              -c user.email="41898282+github-actions[bot]@users.noreply.github.com" \
+              commit -m "Regenerate the Copilot architects"
+          git push origin "HEAD:$BRANCH"

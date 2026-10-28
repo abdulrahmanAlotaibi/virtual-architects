@@ -1,0 +1,14 @@
+# Curated reading list for the research architect. `serves` names the architects a source is for.
+# `checked` is the date the research architect last confirmed the source is live and current,
+# or null if it has not been checked yet. Internal sources are repo paths and are always current.
+
+internal:
+  - {id: S-PROFILE, title: Project profile, path: docs/architecture/project.yaml, serves: [enterprise, solution, cloud-infra, security]}
+  - {id: S-PLAYBOOK, title: EA playbook, path: docs/architecture/practice/ea-playbook.md, serves: [enterprise, solution, cloud-infra, security]}
+
+books:
+  - {id: S-KOTUSEV, title: "The Practice of Enterprise Architecture: A Modern Approach to Business and IT Alignment", ref: "Svyatoslav Kotusev, 2nd ed., SK Publishing, 2021", serves: [enterprise], note: "Method of the enterprise architect (CSVLOD). Summarise; do not copy text from it"}
+
+external:
+  - {id: S-EAOAP, title: "EA on a Page", url: "https://eaonapage.com", serves: [enterprise, solution, cloud-infra, security], checked: null}
+  - {id: S-ASVS, title: OWASP Application Security Verification Standard, url: "https://owasp.org/www-project-application-security-verification-standard/", serves: [security], checked: null}
