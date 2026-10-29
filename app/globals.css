@@ -473,8 +473,12 @@ main:focus { outline: none; }
 /* Hero */
 .hero { position: relative; padding-block: 64px 72px; }
 .hero-grid { display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr); gap: 48px; align-items: center; }
-.hero h1 { max-width: 17ch; }
-.hero-sub { margin: 22px 0 0; max-width: 54ch; font-size: clamp(17px, 1.6vw, 20px); line-height: 1.55; color: var(--text-2); }
+/* The headline sizes to its own column, not the viewport: the window and the loop beside it
+   leave the copy far narrower than the screen, so a vw size stopped short of the space. cqi
+   is ignored where unsupported and --fs-h1 from h1 stays. */
+.hero-copy { container-type: inline-size; }
+.hero h1 { font-size: clamp(40px, 13cqi, 84px); line-height: 1.04; letter-spacing: -0.035em; }
+.hero-sub { margin: 26px 0 0; max-width: 54ch; font-size: clamp(17px, 1.6vw, 20px); line-height: 1.55; color: var(--text-2); }
 .hero .actions { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 30px; }
 .proof { margin: 18px 0 0; display: flex; flex-wrap: wrap; gap: 4px 16px; font-size: var(--fs-sm); color: var(--muted); }
 .proof a { color: var(--orange-text); font-weight: 700; text-underline-offset: 3px; }
@@ -996,7 +1000,9 @@ abbr[title] { text-decoration: underline dotted; text-underline-offset: 3px; cur
 /* Worked examples (/examples). Each step, route box and voice sets --t and --t-ink to its
    architect's tint, so one rule colors every lane. */
 .page-hero { padding-block: 48px 56px; }
-.page-hero h1 { max-width: 20ch; }
+.page-hero .wrap { container-type: inline-size; }
+.page-hero h1 { max-width: 22ch; font-size: clamp(36px, 7.5cqi, 72px); line-height: 1.12; letter-spacing: -0.035em; }
+.page-hero .lede { margin-top: 24px; }
 .page-back { display: inline-block; margin-bottom: 20px; font-size: var(--fs-sm); font-weight: 700; color: var(--orange-text); text-underline-offset: 4px; }
 .ex-cast { list-style: none; margin: 24px 0 0; padding: 0; display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: var(--fs-sm); font-weight: 700; color: var(--text-2); }
 .ex-cast li { display: flex; align-items: center; gap: 7px; }
