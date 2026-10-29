@@ -4,11 +4,12 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "prebuild": "python3 scripts/build-kit.py",
+    "prebuild": "python3 scripts/build-kit.py && python3 scripts/build-m365.py",
     "build": "next build",
     "kit": "python3 scripts/build-kit.py",
     "start": "npx serve out",
-    "lint": "next lint"
+    "lint": "next lint",
+    "m365": "python3 scripts/build-m365.py"
   },
   "dependencies": {
     "next": "16.4.2",
