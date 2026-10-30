@@ -361,7 +361,7 @@ export const kit = {
     { label: "board", path: ".claude/commands/arch-board.md" },
   ],
   treeTitle: "What is inside",
-  treeNote: "Every file downloads on its own. The .github copies are generated from .claude: edit .claude and let the script do the rest.",
+  treeNote: "Every file opens on GitHub, where you can read it before installing anything. The .github copies are generated from .claude: edit .claude and let the script do the rest.",
   // The ways to install. The zip method's panel is the download card; the rest are commands.
   // Every method ends with the same two steps, in `then`.
   methods: [
@@ -496,7 +496,7 @@ export const faq: [string, string][] = [
   ],
   [
     "How do I update the kit later?",
-    "Run the installer again with --update: it refreshes the kit's own files and leaves your project.yaml and documents alone. With the zip, download it again, unzip into an empty folder and compare.",
+    "Run the installer again with its update option: curl -fsSL <url> | sh -s -- --update on macOS and Linux, or & ([scriptblock]::Create((irm <url>))) -Update in PowerShell. The Get the kit section has both, ready to copy. It refreshes the kit's own files and leaves your project.yaml and documents alone. With the zip, download it again, unzip into an empty folder and compare.",
   ],
 ];
 

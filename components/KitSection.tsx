@@ -2,9 +2,21 @@ import CopyButton from "@/components/CopyButton";
 import InstallMethods from "@/components/InstallMethods";
 import InstallWhere from "@/components/InstallWhere";
 import { formatBytes, kitHref, kitManifest, type KitFile } from "@/content/kit";
-import { kit } from "@/content/site";
+import { kit, site } from "@/content/site";
 
 type Dir = { name: string; path: string; dirs: Dir[]; files: KitFile[] };
+
+// A kit file opens on GitHub, where it renders and can be read before anything is saved.
+// Until site.repoUrl is set, it downloads from the site instead.
+function fileLink(path: string) {
+  return site.repoUrl
+    ? { href: `${site.repoUrl}/blob/main/kit/${path}`, target: "_blank", rel: "noreferrer" }
+    : { href: kitHref(path), download: path.split("/").pop() };
+}
+
+function NewTab() {
+  return site.repoUrl ? <span className="sr-only"> (opens on GitHub in a new tab)</span> : null;
+}
 
 function buildTree(files: KitFile[]): Dir {
   const root: Dir = { name: "", path: "", dirs: [], files: [] };
@@ -51,9 +63,10 @@ function Entries({ dir }: { dir: Dir }) {
         const name = f.path.split("/").pop()!;
         return (
           <li key={f.path} className="file">
-            <a href={f.href} download={name} title={`Download ${f.path}`}>
+            <a {...fileLink(f.path)} title={site.repoUrl ? `Open ${f.path} on GitHub` : `Download ${f.path}`}>
               {name}
               {f.executable && <span className="x" title="Executable">*</span>}
+              <NewTab />
             </a>
             <span className="meta">{formatBytes(f.bytes)}</span>
           </li>
@@ -85,7 +98,7 @@ export default function KitSection() {
             <h2 id="kit-h">{kit.title}</h2>
             <p className="lede">{kit.lede}</p>
           </div>
-          <a className="more" href={kitHref("INSTALL.md")} download="INSTALL.md">INSTALL.md ↓</a>
+          <a className="more" {...fileLink("INSTALL.md")}>INSTALL.md {site.repoUrl ? "↗" : "↓"}<NewTab /></a>
         </div>
 
         <div className="kit">
@@ -117,11 +130,11 @@ export default function KitSection() {
                       </div>
                     </div>
                     <p className="one-arch">
-                      Or take just one architect:{" "}
+                      {site.repoUrl ? "Or read one architect on GitHub first:" : "Or take just one architect:"}{" "}
                       {kit.oneArchitect.map((a, i) => (
                         <span key={a.path}>
                           {i > 0 && <span aria-hidden="true"> · </span>}
-                          <a href={kitHref(a.path)} download={a.path.split("/").pop()}>{a.label}</a>
+                          <a {...fileLink(a.path)}>{a.label}<NewTab /></a>
                         </span>
                       ))}
                     </p>
