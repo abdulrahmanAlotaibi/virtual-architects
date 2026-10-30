@@ -1,18 +1,10 @@
 import CopyButton from "@/components/CopyButton";
 import InstallMethods from "@/components/InstallMethods";
 import InstallWhere from "@/components/InstallWhere";
-import { formatBytes, kitHref, kitManifest, type KitFile } from "@/content/kit";
-import { kit, site } from "@/content/site";
+import { formatBytes, kitManifest, type KitFile } from "@/content/kit";
+import { kit, kitFileLink as fileLink, site } from "@/content/site";
 
 type Dir = { name: string; path: string; dirs: Dir[]; files: KitFile[] };
-
-// A kit file opens on GitHub, where it renders and can be read before anything is saved.
-// Until site.repoUrl is set, it downloads from the site instead.
-function fileLink(path: string) {
-  return site.repoUrl
-    ? { href: `${site.repoUrl}/blob/main/kit/${path}`, target: "_blank", rel: "noreferrer" }
-    : { href: kitHref(path), download: path.split("/").pop() };
-}
 
 function NewTab() {
   return site.repoUrl ? <span className="sr-only"> (opens on GitHub in a new tab)</span> : null;

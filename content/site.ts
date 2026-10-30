@@ -1,6 +1,6 @@
 // Everything the page says about the team lives in content/. Edit here, not in the components.
 
-import { kitManifest } from "./kit";
+import { kitHref, kitManifest } from "./kit";
 
 export const site = {
   name: "Virtual Architects",
@@ -16,6 +16,14 @@ export const site = {
     role: "Creator",
   },
 };
+
+// A kit file opens on GitHub, where it renders and can be read before anything is saved.
+// Until site.repoUrl is set, it downloads from the site instead.
+export function kitFileLink(path: string) {
+  return site.repoUrl
+    ? { href: `${site.repoUrl}/blob/main/kit/${path}`, target: "_blank", rel: "noreferrer" }
+    : { href: kitHref(path), download: path.split("/").pop() };
+}
 
 // The top of the page, written for the person deciding whether a team should adopt this.
 export const hero = {

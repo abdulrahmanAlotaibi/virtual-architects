@@ -11,8 +11,8 @@ import SiteFooter from "@/components/SiteFooter";
 import Sigil from "@/components/Sigil";
 import ThemeToggle from "@/components/ThemeToggle";
 import WindowScroll from "@/components/WindowScroll";
-import { kitHref, kitManifest } from "@/content/kit";
-import { abbreviations, architects, commands, creatorNote, csvlod, hero, heroCommands, loop, navLinks, site } from "@/content/site";
+import { kitManifest } from "@/content/kit";
+import { abbreviations, architects, commands, creatorNote, csvlod, hero, heroCommands, kitFileLink, loop, navLinks, site } from "@/content/site";
 
 export default function Home() {
   const { creator } = site;
@@ -107,7 +107,7 @@ export default function Home() {
                 <p>{a.thinks}</p>
                 <div className="chips">{a.writes.map((w) => <span className="chip" key={w}><Expand text={w} /></span>)}</div>
                 <p className="owns">Keeps true: {a.owns}</p>
-                <a className="dl-link" href={kitHref(a.agent)} download={a.agent.split("/").pop()}>Download {a.agent.split("/").pop()} ↓</a>
+                <a className="dl-link" {...kitFileLink(a.agent)}>{a.agent.split("/").pop()} {site.repoUrl ? "↗" : "↓"}</a>
               </article>
             ))}
             <article className="board">
@@ -120,7 +120,7 @@ export default function Home() {
                 For the questions that cross lanes. If there is a source, research reads it first. Then every architect it touches answers
                 in parallel, and you get one recommendation with the disagreements left in.
               </p>
-              <a className="dl-link" href={kitHref(".claude/commands/arch-board.md")} download="arch-board.md">Download arch-board.md ↓</a>
+              <a className="dl-link" {...kitFileLink(".claude/commands/arch-board.md")}>arch-board.md {site.repoUrl ? "↗" : "↓"}</a>
             </article>
           </div>
           <p className="cmd-note">

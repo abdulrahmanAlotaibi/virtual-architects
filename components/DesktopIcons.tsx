@@ -1,9 +1,10 @@
 import type { ReactNode } from "react";
-import { kitHref, kitManifest } from "@/content/kit";
+import { kitManifest } from "@/content/kit";
+import { kitFileLink } from "@/content/site";
 
 // The desktop shortcuts beside the app window (1100px and wider). Each is a plain link,
 // so they work without JavaScript; the pictograms are drawn here, line plus one color.
-type Shortcut = { label: string; href: string; icon: keyof typeof ICONS; download?: string };
+type Shortcut = { label: string; href: string; icon: keyof typeof ICONS; download?: string; target?: string; rel?: string };
 
 const line = { fill: "none", stroke: "var(--icon-line)", strokeWidth: 2, strokeLinejoin: "round", strokeLinecap: "round" } as const;
 const paper = { fill: "var(--icon-paper)", stroke: "var(--icon-line)", strokeWidth: 2, strokeLinejoin: "round" } as const;
@@ -95,7 +96,7 @@ const LEFT: Shortcut[] = [
 
 const RIGHT: Shortcut[] = [
   { label: "kit.zip", href: kitManifest.zip.href, icon: "zip", download: "virtual-architects-kit.zip" },
-  { label: "INSTALL.md", href: kitHref("INSTALL.md"), icon: "install", download: "INSTALL.md" },
+  { label: "INSTALL.md", ...kitFileLink("INSTALL.md"), icon: "install" },
   { label: "Examples", href: "/examples", icon: "examples" },
   { label: "Repository", href: "#repository", icon: "repository" },
   { label: "FAQ", href: "/faq", icon: "faq" },
@@ -109,10 +110,11 @@ export default function DesktopIcons({ side, base = "" }: { side: "left" | "righ
       <ul>
         {items.map((s) => (
           <li key={s.label}>
-            <a className="dicon" href={s.href} download={s.download}>
+            <a className="dicon" href={s.href} download={s.download} target={s.target} rel={s.rel}>
               <svg width="40" height="40" viewBox="0 0 40 40" aria-hidden="true">{ICONS[s.icon]}</svg>
               <span>{s.label}</span>
               {s.download && <span className="sr-only"> (download)</span>}
+              {s.target && <span className="sr-only"> (opens on GitHub in a new tab)</span>}
             </a>
           </li>
         ))}
