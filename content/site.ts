@@ -339,6 +339,8 @@ export type InstallMethod = {
   intro: string;
   blocks: { label?: string; code: string; chat?: boolean; plain?: boolean }[];
   note: string;
+  // Commands shown after the note, such as how to update.
+  update?: { label: string; code: string }[];
 };
 
 // The downloadable kit. Sizes, hashes and the file list come from content/kit-manifest.json,
@@ -372,7 +374,11 @@ export const kit = {
         { label: "macOS and Linux", code: `curl -fsSL ${kitManifest.install.sh} | sh` },
         { label: "Windows PowerShell", code: `irm ${kitManifest.install.ps1} | iex` },
       ],
-      note: "Run it again with --update (-Update on Windows) to refresh the kit's own files. Your project.yaml and the architects' documents are never replaced.",
+      note: "To refresh the kit's own files later, run it again with the update option. Your project.yaml and the architects' documents are never replaced.",
+      update: [
+        { label: "Update on macOS and Linux", code: `curl -fsSL ${kitManifest.install.sh} | sh -s -- --update` },
+        { label: "Update on Windows PowerShell", code: `& ([scriptblock]::Create((irm ${kitManifest.install.ps1}))) -Update` },
+      ],
     },
     {
       id: "zip",
@@ -391,7 +397,7 @@ export const kit = {
         { code: `git clone --depth 1 ${site.repoUrl}.git /tmp/virtual-architects` },
         { label: "At the root of your repository", code: "cp -Rn /tmp/virtual-architects/kit/. ." },
       ],
-      note: "With -n, cp never overwrites a file you have. A git pull in the clone gets the next version.",
+      note: "With -n, cp never overwrites a file you have. A git pull in the clone gets the next version. On macOS, cp -n exits with status 1 when it skips a file you already have: that is expected, not a failure.",
     },
   ] as InstallMethod[],
   thenTitle: "Then, however you installed it",

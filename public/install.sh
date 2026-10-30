@@ -13,11 +13,28 @@ set -eu
 BASE_URL="${VA_BASE_URL:-https://raw.githubusercontent.com/abdulrahmanAlotaibi/virtual-architects/main/public}"
 ZIP_URL="$BASE_URL/downloads/virtual-architects-kit.zip"
 ZIP_SHA256="c08941916d3cca6c16acc2c51ab68422b052d9af6d2faded0dda6a6388ef71e8"
+UPDATE_CMD="curl -fsSL https://raw.githubusercontent.com/abdulrahmanAlotaibi/virtual-architects/main/public/install.sh | sh -s -- --update"
+# Printed from here, not read from "$0": piped into sh, the script has no file to read.
+usage() {
+  cat <<EOF
+Virtual Architects installer. Adds the architect kit to the folder you run it in.
+
+Add what is missing:
+  curl -fsSL https://raw.githubusercontent.com/abdulrahmanAlotaibi/virtual-architects/main/public/install.sh | sh
+
+Also refresh the kit's own files:
+  $UPDATE_CMD
+
+It never overwrites your files. With --update it refreshes only the kit's own files
+(agents, commands, the skill, templates, tools and the Copilot copies). It never touches
+docs/architecture/project.yaml or any document you wrote.
+EOF
+}
 UPDATE=0
 for arg in "$@"; do
   case "$arg" in
     --update) UPDATE=1 ;;
-    -h|--help) sed -n '2,10p' "$0" 2>/dev/null || true; exit 0 ;;
+    -h|--help) usage; exit 0 ;;
     *) echo "Unknown option: $arg" >&2; exit 2 ;;
   esac
 done
@@ -85,8 +102,12 @@ say ""
 say "Virtual Architects: $added added, $updated updated, $same already up to date."
 if [ -n "$kept" ]; then
   say "Kept your version of:$kept"
-  [ "$UPDATE" = 1 ] || say "Run again with --update to refresh the kit's own files. Your project.yaml and documents are never replaced."
+  if [ "$UPDATE" != 1 ]; then
+    say "To refresh the kit's own files, run it again with --update. Your project.yaml and documents are never replaced:"
+    say "  $UPDATE_CMD"
+  fi
 fi
 say ""
-say "Next: fill in docs/architecture/project.yaml, then in Claude Code or Copilot Chat type /arch-doc."
+say "Next, in Claude Code or Copilot Chat: /arch-profile to describe your project, then ask a"
+say "first question, for example /arch-board should we add a second payment provider?"
 say "Guide: https://github.com/abdulrahmanAlotaibi/virtual-architects#install-the-team"

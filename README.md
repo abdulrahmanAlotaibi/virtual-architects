@@ -205,14 +205,24 @@ irm https://raw.githubusercontent.com/abdulrahmanAlotaibi/virtual-architects/mai
 ```
 
 The installer checks the zip against its SHA-256 before it unpacks anything, when
-`sha256sum` or `shasum` is on the machine. Run it again with
-`--update` (`-Update` on Windows) to refresh the kit's own files. It never touches
-`docs/architecture/project.yaml` or the documents the architects wrote.
+`sha256sum` or `shasum` is on the machine. To refresh the kit's own files later, run it
+again with the update option. It never touches `docs/architecture/project.yaml` or the
+documents the architects wrote.
+
+```bash
+# macOS and Linux
+curl -fsSL https://raw.githubusercontent.com/abdulrahmanAlotaibi/virtual-architects/main/public/install.sh | sh -s -- --update
+# Windows PowerShell
+& ([scriptblock]::Create((irm https://raw.githubusercontent.com/abdulrahmanAlotaibi/virtual-architects/main/public/install.ps1))) -Update
+```
+
+The shell installer prints both of its forms with `--help` (`… | sh -s -- --help`).
 
 **Zip or Git**: download
 [`virtual-architects-kit.zip`](public/downloads/virtual-architects-kit.zip) and run
 `unzip -n virtual-architects-kit.zip -d .`, or clone this repository and run
-`cp -Rn kit/. /path/to/your/repo/`.
+`cp -Rn kit/. /path/to/your/repo/`. On macOS, `cp -n` exits with status 1 when it skips a
+file you already have; that is expected.
 
 Then let the team describe your project, and ask your first question:
 

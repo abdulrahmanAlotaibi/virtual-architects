@@ -70,6 +70,15 @@ export default function InstallMethods({ methods, extra }: { methods: InstallMet
             </div>
           ))}
           {m.note && <p className="method-note">{m.note}</p>}
+          {m.update?.map((b, j) => (
+            <div key={j} className="method-block">
+              <h4>{b.label}</h4>
+              <div className="shell">
+                <code id={`method-update-${m.id}-${j}`}>{b.code}</code>
+                <CopyButton text={b.code} target={`method-update-${m.id}-${j}`} />
+              </div>
+            </div>
+          ))}
         </div>
       ))}
     </div>
